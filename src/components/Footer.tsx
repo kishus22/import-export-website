@@ -2,10 +2,13 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   const email = "daynit.enterprises@gmail.com";
-  const phone = "918618117524";
+  const callNumber = "8618117524";      // Call number
+  const waNumber = "918884778585";      // 91 + 8884778585
 
   const waLink =
-    "https://wa.me/918618117524?text=" +
+    "https://wa.me/" +
+    waNumber +
+    "?text=" +
     encodeURIComponent("Hello DAYNIT, I am interested in your export products");
 
   return (
@@ -39,23 +42,26 @@ export default function Footer() {
             {/* PHONE */}
             <li className="flex gap-3 items-center">
               <Phone size={18} className="text-[#D97742]" />
-              <a href="tel:+918618117524" className="text-gray-400 hover:text-[#C8A55A]">
-                +91 {phone}
+              <a
+                href={`tel:+91${callNumber}`}
+                className="text-gray-400 hover:text-[#C8A55A]"
+              >
+                +91 {callNumber}
               </a>
             </li>
 
-            {/* WHATSAPP */}
+            {/* WHATSAPP – ORIGINAL ICON + LINK */}
             <li className="flex gap-3 items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
-                viewBox="0 0 32 32"
-                fill="#D97742"
-              >
-                <path d="M16 2.667C8.64 2.667 2.667 8.64 2.667 16c0 2.88.96 5.547 2.573 7.693L4 29.333l5.813-1.2c2.147 1.12 4.587 1.733 7.187 1.733 7.36 0 13.333-5.973 13.333-13.333S23.36 2.667 16 2.667zm6.88 18.987c-.293.827-1.707 1.6-2.373 1.707-.64.107-1.453.16-4.853-1.6-4.093-2.027-6.72-6.013-6.92-6.293-.2-.28-1.64-2.187-1.64-4.173 0-1.987 1.027-2.96 1.387-3.373.36-.413.787-.52 1.053-.52h.747c.24 0 .56-.093.88.413.32.507 1.133 1.88 1.24 2.013.107.133.173.293.067.493-.093.2-.147.333-.28.52-.147.187-.307.413-.44.56-.147.173-.307.373-.133.707.173.333.813 1.333 1.773 2.16 1.2 1.027 2.213 1.36 2.547 1.507.333.147.533.12.747-.093.213-.213.88-.987 1.107-1.32.227-.333.467-.28.787-.173.32.107 2.027.987 2.373 1.173.347.187.587.28.68.427.093.147.093.827-.2 1.653z" />
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                className="text-[#D97742]"  
+                >
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
               </svg>
-
               <a
                 href={waLink}
                 target="_blank"
@@ -69,23 +75,26 @@ export default function Footer() {
             {/* EMAIL */}
             <li className="flex gap-3 items-center">
               <Mail size={18} className="text-[#D97742]" />
-              <a href={`mailto:${email}`} className="text-gray-400 hover:text-[#C8A55A]">
+              <a
+                href={`mailto:${email}`}
+                className="text-gray-400 hover:text-[#C8A55A]"
+              >
                 {email}
               </a>
             </li>
 
             {/* LOCATION */}
-            <li className="flex gap-3 items-center">
-              <MapPin size={18} className="text-[#D97742]" />
-              <a
-                href="https://www.google.com/maps/place/Karnataka"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#C8A55A]"
-              >
-                Karnataka, India
-              </a>
-            </li>
+          <li className="flex gap-3 items-center">
+          <MapPin size={18} className="text-[#D97742]" />
+          <a
+            href="https://www.google.com/maps/place/Karnataka,+India"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-[#C8A55A]"
+          >
+            Karnataka, India
+          </a>
+          </li>
 
           </ul>
         </div>
